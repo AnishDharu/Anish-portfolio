@@ -5,7 +5,6 @@ const titles = [
     'Software Developer',
     'Java Developer',
     'Python Developer',
-    'Django Developer',
     'Full Stack Enthusiast'
 ];
 
