@@ -124,15 +124,23 @@ navLinksEl.querySelectorAll('a').forEach((link) => {
    =========================== */
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = document.getElementById('formName').value;
-    const email = document.getElementById('formEmail').value;
-    const message = document.getElementById('formMessage').value;
 
-    // mailto fallback
-    const mailto = `mailto:anishdharu05@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
-    window.open(mailto, '_blank');
+    const data = new FormData(contactForm);
 
-    contactForm.reset();
+    const response = await fetch(contactForm.action, {
+        method: contactForm.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        alert("Message sent successfully ✅");
+        contactForm.reset();
+    } else {
+        alert("Failed to send message ❌");
+    }
 });
