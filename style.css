@@ -471,9 +471,9 @@ img { max-width: 100%; display: block; }
     border-radius: var(--radius);
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: top;
+    align-items: top;
+    justify-content: top;
     font-size: 5rem;
     color: var(--text-muted);
     overflow: hidden;
@@ -780,6 +780,13 @@ img { max-width: 100%; display: block; }
     transform: scaleX(1);
 }
 
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
 .project-icon {
     width: 52px;
     height: 52px;
@@ -790,7 +797,27 @@ img { max-width: 100%; display: block; }
     justify-content: center;
     font-size: 1.3rem;
     color: #fff;
-    margin-bottom: 16px;
+}
+
+.project-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.project-github-link:hover {
+    color: #fff;
+    background: var(--accent-gradient);
+    border-color: transparent;
+    transform: translateY(-2px);
 }
 
 .project-tags {

@@ -3,9 +3,9 @@
    =========================== */
 const titles = [
     'Software Developer',
-    'Java Developer',
-    'Python Developer',
-    'Full Stack Enthusiast'
+    'Java (Spring Boot) Developer',
+    'Python (Django) Developer',
+    'DevOps & CI/CD Enthusiast'
 ];
 
 let titleIndex = 0;
